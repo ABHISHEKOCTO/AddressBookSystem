@@ -123,5 +123,20 @@ public class AddressBook {
     }
     public void numOfContacts() {
         System.out.println("The Contacts Saved in Book : "+count);
+
+    }
+
+    public void Read_Write_ToFile(){
+        AddressBookIO.createFile();
+        String contactsData = contactList.toString();
+        AddressBookIO.WriteContactsToFile(contactsData);
+        AddressBookIO.WriteContactsToFile(contactsData);
+        AddressBookIO.readData();
+    }
+    @Override
+    public String toString() {
+        return "AddressBook{" +
+                "personsList=" + contactList +
+                '}';
     }
 }
